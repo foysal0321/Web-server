@@ -12,17 +12,17 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/web',(req,res)=>{
-    res.send(data)
+    res.send(data);
 });
 
 app.get('/web/:id',(req,res)=>{
     const ids= req.params.id;
     const selectId = data.find(i => i.id === ids);
     res.send(selectId);
-})
+});
 
 
 
 app.listen(port,()=>{
     console.log(`web server is running ${port}`);
-})
+});
