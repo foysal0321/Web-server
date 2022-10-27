@@ -21,6 +21,12 @@ app.get('/web/:id',(req,res)=>{
     res.send(selectId);
 });
 
+app.get('/checkout/:id',(req,res)=>{
+    const ids= req.params.id;
+    const selectId = data.find(i => i.id === ids);
+    res.send(selectId);
+});
+
 
 
 app.listen(port,()=>{
